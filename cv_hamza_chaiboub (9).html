@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Hamza Chaiboub — CV</title>
+<style>
+
+  /* =========================================================
+     COMMENT METTRE À JOUR CE CV
+     - Tout le contenu est en texte brut dans le HTML ci-dessous,
+       organisé par sections (À propos, Expériences, Formations...).
+     - Pour ajouter une expérience : copiez un bloc <article class="job">
+       en entier et modifiez le texte dedans.
+     - Pour ajouter une puce dans une expérience : copiez une ligne <li>.
+     - Aucune compilation nécessaire : ouvrez le fichier dans un navigateur,
+       Cmd/Ctrl+P > "Enregistrer en PDF" pour exporter.
+     ========================================================= */
+
+  :root{
+    --ink:        #1c2430;   /* texte principal */
+    --ink-soft:   #4a5568;   /* texte secondaire */
+    --accent:     #0f5c56;   /* vert sapin — accent unique */
+    --line:       #d8dde3;   /* filets / séparateurs */
+    --paper:      #ffffff;
+  }
+
+  *{ box-sizing: border-box; }
+
+  html, body{
+    margin:0;
+    padding:0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 10.6pt;
+    line-height: 1.42;
+  }
+
+  .page{
+    max-width: 190mm;
+    margin: 0 auto;
+    padding: 14mm 12mm 10mm 12mm;
+  }
+
+  /* ---------- EN-TÊTE ---------- */
+
+  header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border-bottom: 2.4px solid var(--accent);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+
+  header .identity{
+    flex: 1;
+    text-align: center;
+  }
+
+  header h1{
+    margin:0;
+    font-size: 17pt;
+    letter-spacing: 0.3px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  header .role{
+    margin: 2px 0 0 0;
+    font-size: 10pt;
+    color: var(--accent);
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  header .contact{
+    text-align: right;
+    font-size: 9pt;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    flex-shrink: 0;
+  }
+
+  header .contact a{
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  /* ---------- SECTIONS ---------- */
+
+  section{ margin-bottom: 13px; }
+
+  h2{
+    font-size: 10.3pt;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    color: var(--accent);
+    margin: 0 0 6px 0;
+    padding-bottom: 3px;
+    border-bottom: 0.75px solid var(--line);
+    font-weight: 700;
+  }
+
+  .about p{
+    margin: 0;
+    color: var(--ink);
+    font-size: 9.3pt;
+    line-height: 1.5;
+  }
+
+  /* ---------- EXPÉRIENCES ---------- */
+
+  .job{ margin-bottom: 9px; }
+  .job:last-child{ margin-bottom: 0; }
+
+  .job-head{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .job-head .who{
+    font-weight: 700;
+    font-size: 9.8pt;
+  }
+
+  .job-head .who .company-loc{
+    font-weight: 400;
+    color: var(--ink-soft);
+    font-size: 8.8pt;
+  }
+
+  .job-head .when{
+    font-size: 8.7pt;
+    color: var(--ink-soft);
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  .job .title-line{
+    font-style: italic;
+    color: var(--ink-soft);
+    font-size: 8.9pt;
+    margin: 0 0 3px 0;
+  }
+
+  .job ul{
+    margin: 3px 0 1px 0;
+    padding-left: 15px;
+    font-size: 8.9pt;
+    line-height: 1.48;
+  }
+
+  .job li{
+    margin-bottom: 1.5px;
+  }
+
+  .stack{
+    margin: 1px 0 0 0;
+    font-size: 8.3pt;
+    color: var(--ink-soft);
+  }
+
+  .stack b{
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ---------- FORMATIONS ---------- */
+
+  .edu-row{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 3px;
+  }
+
+  .edu-row .school{ font-weight: 700; font-size: 10.6pt; }
+  .edu-row .loc{ color: var(--ink-soft); font-size: 9.5pt; }
+  .edu-row .degree{ color: var(--ink-soft); font-style: italic; font-size: 8pt; }
+
+  /* ---------- COMPÉTENCES / LANGUES ---------- */
+
+  .skills-grid{
+    display:grid;
+    grid-template-columns: 130px 1fr;
+    row-gap: 4px;
+    column-gap: 10px;
+    font-size: 8.6pt;
+  }
+
+  .skills-grid .label{
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+  }
+
+  @media print{
+    body{ -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page{ padding: 8mm 10mm; }
+    @page{ size: A4; margin: 10mm; }
+  }
+
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= EN-TÊTE ================= -->
+  <header>
+    <div class="identity">
+      <h1>HAMZA CHAIBOUB</h1>
+      <p class="role">AI Ingénieur / Data Ingénieur</p>
+    </div>
+    <div class="contact">
+      chaiboubhamza97@gmail.com<br>
+      +33 6 11 13 71 50<br>
+      <a href="https://www.linkedin.com/in/chaiboub-hamza">linkedin.com/in/chaiboub-hamza</a><br>
+      Paris (Mobile)
+    </div>
+  </header>
+
+  <!-- ================= EXPÉRIENCES ================= -->
+  <section>
+    <h2>Expériences</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="who">ALSTOM <span class="company-loc">— France</span></div>
+        <div class="when">Février 2026 – Avril 2026</div>
+      </div>
+      <p class="title-line">Consultant Data (Mission)</p>
+      <ul>
+        <li>Standardisation et automatisation de la consolidation des données SIOP, mise en place de processus ETL et de contrôles de qualité des données, et intégration des données métiers multi-sources</li>
+        <li>Développement de tableaux de bord Power BI pour le suivi de la planification et des projets</li>
+        <li>Réalisation de requêtes SQL pour exploiter les données et produire des synthèses sur les charges et capacités</li>
+      </ul>
+      <p class="stack"><b>Technologies :</b> SQL, Power BI, DAX, Power Query, Excel, Data Modelling, ETL</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="who">CHRISTEYNS <span class="company-loc">— France</span></div>
+        <div class="when">Septembre 2024 – Juin 2025</div>
+      </div>
+      <p class="title-line">Data Scientist (Mission)</p>
+      <ul>
+        <li>Développement et déploiement de modèles de Machine Learning (Random Forest, XGBoost, régression logistique) pour la détection d'anomalies et la prédiction d'écarts tarifaires dans les données de consommation</li>
+        <li>Analyse exploratoire avancée des données industrielles multi-sources pour alimenter les modèles prédictifs</li>
+        <li>Conception et exécution de requêtes SQL avancées pour l'extraction et la préparation des données</li>
+        <li>Création, optimisation et maintenance de tableaux de bord pour le suivi en temps réel des KPIs</li>
+        <li>Mise en place de processus d'automatisation via Power Query — gain de 90 % sur le temps de traitement</li>
+      </ul>
+      <p class="stack"><b>Technologies :</b> Python, SQL (SQL Server, Snowflake), Microsoft Fabric, DAX</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <div class="who">CAPGEMINI <span class="company-loc">— Maroc</span></div>
+        <div class="when">Mars 2022 – Juin 2023</div>
+      </div>
+      <p class="title-line">Data Engineer / Data Scientist</p>
+      <ul>
+        <li>Développement de pipelines de données en Python et PySpark sur Databricks (Azure) pour le traitement de données massives — réduction de 50 % des temps d'exécution</li>
+        <li>Conception et entraînement de modèles de Machine Learning (scoring client, détection de comportements à risque) : régression logistique, Random Forest, XGBoost</li>
+        <li>Intégration de modèles d'IA dans des pipelines de production industrialisés sur Azure</li>
+        <li>Construction de dashboards pour le suivi d'indicateurs et accompagnement des équipes métiers</li>
+        <li>Rédaction de documentation technique et fonctionnelle pour assurer la traçabilité</li>
+      </ul>
+      <p class="stack"><b>Technologies :</b> Python, SQL, Spark, Azure, GCP, AWS, Databricks, GitHub, Snowflake</p>
+    </article>
+
+  </section>
+
+  <!-- ================= FORMATIONS ================= -->
+  <section>
+    <h2>Formations</h2>
+    <div class="edu-row">
+      <span class="school">Faculté des Sciences de Rabat (FSR)</span>
+      <span class="loc">Rabat, Maroc</span>
+    </div>
+    <p class="degree" style="margin:-2px 0 8px 0;">Master Spécialisé — Sciences du Numérique et Intelligence Artificielle</p>
+
+    <div class="edu-row">
+      <span class="school">École Supérieure de Commerce (ESC) de Rennes</span>
+      <span class="loc">Rennes, France</span>
+    </div>
+    <p class="degree" style="margin:-2px 0 8px 0;">Master of Science — Data Science</p>
+
+    <div class="edu-row">
+      <span class="school">Faculté des Sciences de Rabat (FSR)</span>
+      <span class="loc">Rabat, Maroc</span>
+    </div>
+    <p class="degree" style="margin:-2px 0 0 0;">Licence en Informatique</p>
+  </section>
+
+  <!-- ================= COMPÉTENCES ================= -->
+  <section>
+    <h2>Compétences techniques</h2>
+    <div class="skills-grid">
+      <span class="label">Techniques</span>
+      <span>Python, SQL, PySpark, ETL, Azure, GCP, AWS, Databricks, GitHub, Machine &amp; Deep Learning, NLP</span>
+    </div>
+  </section>
+
+  <!-- ================= LANGUES ================= -->
+  <section style="margin-bottom:0;">
+    <h2>Compétences linguistiques</h2>
+    <p style="margin:0; font-size:8.8pt;">Français (Bilingue) &nbsp;·&nbsp; Arabe (Langue maternelle) &nbsp;·&nbsp; Anglais (C1)</p>
+  </section>
+
+</div>
+</body>
+</html>
